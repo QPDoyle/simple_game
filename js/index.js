@@ -2,8 +2,7 @@ function Tile(color) {
     this.color = color;
 }
 const tiles = [];
-const totalFlips = 0;
-
+const totalFlips = document.getElementById('totalFlips');
 const tile1 = document.getElementById('tile1');
 const tile2 = document.getElementById('tile2');
 const tile3 = document.getElementById('tile3');

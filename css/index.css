@@ -9,28 +9,63 @@ h1 {
     line-height: 1;
     margin-bottom: 0;
 }
-
-.game-board {
-    /* set size of game board */
-    width: 65%;
-    min-height: 400px;
-
-    /* centers game board on the screen */
-    margin: 0 auto;
-
-    /* set layout of holes within game board using flexbox */
+.tiles {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-.tile {
-    /* create mole shape */
     background-color: darkslategrey;
-    width: 80%;
-    height: 80%;
     
-    /* set mole position */
-    position: absolute;
-    top: 100%;
-
 }
+#tile1 {
+    width: 200px;
+    height: 200px;
+}
+#tile2 {
+    width: 200px;
+    height: 200px;
+}
+
+#tile3 {
+    width: 200px;
+    height: 200px;
+}
+
+#tile4 {
+    width: 200px;
+    height: 200px;
+}
+
+#tile5 {
+    width: 200px;
+    height: 200px;
+}
+
+#tile6 {
+    width: 200px;
+    height: 200px;
+}
+
+#tile7 {
+    width: 200px;
+    height: 200px;
+}
+
+#tile8 {
+    width: 200px;
+    height: 200px;
+}
+
+
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+
