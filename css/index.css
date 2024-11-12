@@ -11,52 +11,48 @@ h1 {
 }
 .tiles {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    background-color: darkslategrey;
+    flex-direction: row;
     
 }
-#tile1 {
-    width: 200px;
-    height: 200px;
+#blank1 {
+    width: 20px;
+    height: 20px;
 }
-#tile2 {
+#blank2 {
+    width: 20px;
+    height: 20px;
+}
+#blank3 {
+    width: 20px;
+    height: 20px;
+}
+#blank4 {
+    width: 20px;
+    height: 20px;
+}
+#blank5 {
+    width: 20px;
+    height: 20px;
+}
+#blank6 {
+    width: 20px;
+    height: 20px;
+}
+#blank7 {
+    width: 20px;
+    height: 20px;
+}
+.unFlipped {
     width: 200px;
     height: 200px;
+    background-color: darkslategrey;
 }
 
-#tile3 {
-    width: 200px;
-    height: 200px;
-}
-
-#tile4 {
-    width: 200px;
-    height: 200px;
-}
-
-#tile5 {
-    width: 200px;
-    height: 200px;
-}
-
-#tile6 {
-    width: 200px;
-    height: 200px;
-}
-
-#tile7 {
-    width: 200px;
-    height: 200px;
-}
-
-#tile8 {
-    width: 200px;
-    height: 200px;
-}
 
 
 .blue{
+    width: 200px;
+    height: 200px;
     background-color: blue;
 }
 .red{
