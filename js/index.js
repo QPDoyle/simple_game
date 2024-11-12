@@ -9,10 +9,50 @@ const shuffleArray = array => {
       array[i] = array[j];
       array[j] = temp;
     }
-  }
-  
+}
 
-const totalFlips = document.getElementById('totalFlips');
+function numUp(color, opp) {
+    if(color === 'blue') {
+        if(opp = '+'){
+            return blueUp + 1;
+        }
+        else if (opp = '-'){
+            return blueUp - 1;
+        }
+    }
+    if(color === 'green') {
+        if(opp = '+'){
+            return greenUp + 1;
+        }
+        else if (opp = '-'){
+            return greenUp - 1;
+        }
+    }
+    if(color === 'red') {
+        if(opp = '+'){
+            return redUp + 1;
+        }
+        else if (opp = '-'){
+            return redUp - 1;
+        }
+    }
+    if(color === 'yellow') {
+        if(opp = '+'){
+            return yellowUp + 1;
+        }
+        else if (opp = '-'){
+            return yellowUp - 1;
+        }
+    }
+}
+
+totalUp = 0;
+const blueUp = 0;
+const greenUp = 0;
+const redUp = 0;
+const yellowUp = 0;
+
+let totalFlips = 0;
 const tile1 = document.getElementById('tile1');
 const tile2 = document.getElementById('tile2');
 const tile3 = document.getElementById('tile3');
@@ -31,19 +71,29 @@ for (i in colors) {
 }   
 
 tile1.addEventListener('click', e =>{
-    if(tile1.className === 'unFlipped'){
-        console.log("click");
-        tile1.className = colors[0];
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
+    if(tile1.className === 'unFlipped'){ //checking if tile is un-flipped
+        numUp(colors[0], '+');
+        tile1.className = colors[0]; // changes color of tile to its flipped color
     }
-    else if(tile1.className === colors[1].concat('Pair')){
-        tile1.className = colors[1].concat('Pair');
+    else if(tile1.className === colors[0].concat('Pair') || numUp(colors[0]) === 1){ //if been paired, or if 1 of same color is already up
+        console.log("pair");
+        tile1.className = colors[0].concat('Pair');
     }
     else {
         tile1.className = 'unFlipped';
+        numUp(colors[0], '-');
 
     }
 })
 tile2.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile2.className === 'unFlipped'){
         console.log("click");
         tile2.className = colors[1];
@@ -57,6 +107,10 @@ tile2.addEventListener('click', e =>{
     }
 })
 tile3.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile3.className === 'unFlipped'){
         console.log("click");
         tile3.className = colors[2];
@@ -70,6 +124,10 @@ tile3.addEventListener('click', e =>{
     }
 })
 tile4.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile4.className === 'unFlipped'){
         console.log("click");
         tile4.className = colors[3];
@@ -83,6 +141,10 @@ tile4.addEventListener('click', e =>{
     }
 })
 tile5.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile5.className === 'unFlipped'){
         console.log("click");
         tile5.className = colors[4];
@@ -96,6 +158,10 @@ tile5.addEventListener('click', e =>{
     }
 })
 tile6.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile6.className === 'unFlipped'){
         console.log("click");
         tile6.className = colors[5];
@@ -109,6 +175,10 @@ tile6.addEventListener('click', e =>{
     }
 })
 tile7.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile7.className === 'unFlipped'){
         console.log("click");
         tile7.className = colors[6];
@@ -122,6 +192,10 @@ tile7.addEventListener('click', e =>{
     }
 })
 tile8.addEventListener('click', e =>{
+    //records the flip and updates the counter
+    totalFlips++;
+    document.getElementById('totalFlips').textContent = totalFlips;
+
     if(tile8.className === 'unFlipped'){
         console.log("click");
         tile8.className = colors[7];
