@@ -1,6 +1,16 @@
 function Tile(color) {
     this.color = color;
 }
+//Fisher-Yates shuffle
+const shuffleArray = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  }
+  
 
 const totalFlips = document.getElementById('totalFlips');
 const tile1 = document.getElementById('tile1');
@@ -14,6 +24,7 @@ const tile8 = document.getElementById('tile8');
 const tiles = [];
 
 const colors = ['blue', 'blue', 'green', 'green', 'red', 'red', 'yellow', 'yellow'];
+shuffleArray(colors);
 for (i in colors) {
     const newTile = new Tile(colors[i]);
     tiles.push(newTile);
