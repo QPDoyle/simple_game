@@ -5,9 +5,13 @@ body {
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 6rem;
     line-height: 1;
     margin-bottom: 0;
+}
+.flipTracker {
+   display: flex;
+   justify-content: center;
 }
 .tiles {
     display: flex;
@@ -56,23 +60,50 @@ h1 {
     background-color: blue;
 }
 .bluePair{
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
     background-color: blue;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: black;
 }
 .red{
     width: 200px;
     height: 200px;
     background-color: red;
 }
+.redPair{
+    width: 190px;
+    height: 190px;
+    background-color: red;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: black;
+}
 .green{
     width: 200px;
     height: 200px;
     background-color: green;
 }
+.greenPair{
+    width: 190px;
+    height: 190px;
+    background-color: green;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: black;
+}
 .yellow{
     width: 200px;
     height: 200px;
     background-color: yellow;
+}
+.yellowPair{
+    width: 190px;
+    height: 190px;
+    background-color: yellow;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: black;
 }
 

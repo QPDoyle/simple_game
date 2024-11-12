@@ -76,7 +76,7 @@ tile1.addEventListener('click', e =>{
     document.getElementById('totalFlips').textContent = totalFlips;
 
     if(tile1.className === 'unFlipped'){ //checking if tile is un-flipped
-        numUp(colors[0], '+');
+        numUp(0, '+')
         tile1.className = colors[0]; // changes color of tile to its flipped color
     }
     else if(tile1.className === colors[0].concat('Pair') || numUp(colors[0]) === 1){ //if been paired, or if 1 of same color is already up
@@ -85,7 +85,6 @@ tile1.addEventListener('click', e =>{
     }
     else {
         tile1.className = 'unFlipped';
-        numUp(colors[0], '-');
 
     }
 })
