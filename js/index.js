@@ -122,6 +122,10 @@ tile1.addEventListener('click', e =>{
     totalFlips++;
     document.getElementById('totalFlips').textContent = totalFlips;
 
+    if (totalFlips === 10) {
+        alert("You've reached 10 flips! Congrats!");
+    }
+
     if(tile1.className === 'unFlipped'){ //checking if tile is un-flipped
         numUp(colors[0], '+')
         tile1.className = colors[0]; // changes color of tile to its flipped color
@@ -255,5 +259,7 @@ tile8.addEventListener('click', e =>{
 
     }
 })
+
+
 
 
