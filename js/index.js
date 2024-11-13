@@ -13,34 +13,34 @@ const shuffleArray = array => {
 
 function numUp(color, opp) {
     if(color === 'blue') {
-        if(opp = '+'){
+        if(opp === '+'){
             return blueUp + 1;
         }
-        else if (opp = '-'){
+        else if (opp === '-'){
             return blueUp - 1;
         }
     }
     if(color === 'green') {
-        if(opp = '+'){
+        if(opp === '+'){
             return greenUp + 1;
         }
-        else if (opp = '-'){
+        else if (opp === '-'){
             return greenUp - 1;
         }
     }
     if(color === 'red') {
-        if(opp = '+'){
+        if(opp === '+'){
             return redUp + 1;
         }
-        else if (opp = '-'){
+        else if (opp === '-'){
             return redUp - 1;
         }
     }
     if(color === 'yellow') {
-        if(opp = '+'){
+        if(opp === '+'){
             return yellowUp + 1;
         }
-        else if (opp = '-'){
+        else if (opp === '-'){
             return yellowUp - 1;
         }
     }
@@ -63,12 +63,59 @@ const tile7 = document.getElementById('tile7');
 const tile8 = document.getElementById('tile8');
 const tiles = [];
 
+
 const colors = ['blue', 'blue', 'green', 'green', 'red', 'red', 'yellow', 'yellow'];
 shuffleArray(colors);
 for (i in colors) {
     const newTile = new Tile(colors[i]);
     tiles.push(newTile);
 }   
+
+/*
+Universal Event Listener('click', e =>)
+    (or universal flip/e function)
+
+    checks if tile is flipped or not and acts accordingly
+
+    increments using numUp ect...
+    increments totalFlips...
+
+    If only tile of its color up sets it to said color
+        If it makes a match sets both tile to the pair version of the color
+
+    If already a pair version does not change
+    Total up is at most 2, then would ideally reset to 0.
+*/
+
+/* Working solution for non hardcoded event listener
+
+for (i in tiles) {
+    const tile = tiles[i];
+    tile.addEventListener('click', e =>{
+
+        totalFlips++;
+        document.getElementById('totalFlips').textContent = totalFlips;
+
+        if(tiles[i].className === 'unFlipped'){ //checking if tile is un-flipped
+            numUp(colors[i], '+')
+            tile1.className = colors[i]; // changes color of tile to its flipped color
+        }
+        else if(tile1.className === colors[i].concat('Pair') || numUp(colors[i]) === 1){ //if been paired, or if 1 of same color is already up
+            console.log("pair");
+            tile1.className = colors[i].concat('Pair');
+        }
+        else {
+            numUp(colors[i], '-')
+            tile1.className = 'unFlipped';
+
+        }
+    });
+}
+*/
+
+
+
+//Hard coded event listeners
 
 tile1.addEventListener('click', e =>{
     //records the flip and updates the counter
@@ -208,4 +255,5 @@ tile8.addEventListener('click', e =>{
 
     }
 })
+
 
